@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Zapatilla en Línea</title>
+</head>
+<body class="flex h-screen w-screen justify-center items-center bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300">
+<!-- Contenedor principal -->
+<div class="relative flex items-center h-96 w-1/4">
+    <!-- Botones con imágenes a la izquierda -->
+    <div class="absolute flex flex-col space-y-10 left-[-57px] top-13">
+        <!-- Botón 1 -->
+        <button id="clic1" class="flex justify-center items-center w-28 h-20 bg-white border-2 border-gray-500 rounded-lg" style="background-color: rgba(255, 255, 255, 0.6);">
+            <img id="jordan" src="—Pngtree—sneaker%20flat%20vector_7885068.png" class="h-18 w-18 object-contain z-10 mt-2 transition-transform duration-300 transform hover:-rotate-12" alt="Nike Jordan 1">
+        </button>
+        <!-- Botón 2 -->
+        <button id="clic2" class="flex justify-center items-center w-28 h-20 bg-white border-2 border-gray-500 rounded-lg" style="background-color: rgba(255, 255, 255, 0.6);">
+            <img id="colors" src="—Pngtree—color%20full%20sneakers%20sepatu%20shoes_7427962.png" class="h-18 w-18 object-contain z-10 mt-2 transition-transform duration-300 transform hover:-rotate-12" alt="Amarillo">
+        </button>
+        <!-- Botón 3 -->
+        <button id="clic3" class="flex justify-center items-center w-28 h-20 bg-white border-2 border-gray-500 rounded-lg" style="background-color: rgba(255, 255, 255, 0.6);">
+            <img id="amarilla" src="—Pngtree—sepatu%20yellow%20shoes%20sneakers%20icon_7424360.png" class="h-18 w-18 object-contain z-10 mt-2 transition-transform duration-300 transform hover:rotate-12" alt="">
+        </button>
+    </div>
+
+    <!-- Div principal con borde -->
+    <div class="my-10 py-3 flex flex-col items-center h-full w-full border-2 border-white rounded-lg overflow-hidden pt-7 pl-8">
+        <!-- Div transparente -->
+        <div class="absolute inset-0 bg-white opacity-20 rounded-lg z-0"></div>
+
+        <!-- Contenido centrado -->
+        <h1 class="text-center font-black text-2xl text-white z-10">Nike Jordan 1</h1>
+        <img id="mainimg" src="—Pngtree—sneaker%20flat%20vector_7885068.png" class="h-60 w-3/4 object-contain z-10 mt-2" alt="Nike Jordan 1">
+
+        <!-- Div debajo de la imagen -->
+        <div class="flex h-10 w-full z-10 justify-center space-x-4 mt-2">
+            <h1 class="text-2xl text-white font-medium">Size</h1>
+            <div class="flex space-x-4">
+                <button id="talla-7" class="w-8 h-8 rounded bg-white text-blue-700 text-2xl flex justify-center items-center font-black shadow-sm transform transition-transform duration-300 hover:-translate-y-2">7</button>
+                <button id="talla-8" class="w-8 h-8 rounded bg-white text-blue-700 text-2xl flex justify-center items-center font-black transform transition-transform duration-300 hover:-translate-y-2">8</button>
+                <button id="talla-9" class="w-8 h-8 rounded bg-white text-blue-700 text-2xl flex justify-center items-center font-black transform transition-transform duration-300 hover:-translate-y-2">9</button>
+                <button id="talla-10" class="w-8 h-8 rounded bg-white text-blue-700 text-2xl flex justify-center items-center font-black transform transition-transform duration-300 hover:-translate-y-2">10</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script JavaScript -->
+<script>
+    const main = document.getElementById('mainimg');
+    const clic1 = document.getElementById('clic1');
+    const clic2 = document.getElementById('clic2');
+    const clic3 = document.getElementById('clic3');
+
+    // Función para cambiar la imagen principal
+    function changeImage(imageSrc) {
+        main.src = imageSrc; // Cambia el atributo src de la imagen principal
+    }
+
+    // Agregar eventos de clic a los botones
+    clic1.addEventListener('click', function() {
+        changeImage('—Pngtree—sneaker%20flat%20vector_7885068.png'); // Imagen Jordan
+    });
+
+    clic2.addEventListener('click', function() {
+        changeImage('—Pngtree—color%20full%20sneakers%20sepatu%20shoes_7427962.png'); // Imagen Amarillo
+    });
+
+    clic3.addEventListener('click', function() {
+        changeImage('—Pngtree—sepatu%20yellow%20shoes%20sneakers%20icon_7424360.png'); // Imagen de Color
+    });
+</script>
+</body>
+</html>
